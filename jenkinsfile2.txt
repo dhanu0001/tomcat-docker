@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+         stage('init') {
+		       steps { 
+			          echo 'Hi this is Dhanunjay
+                      echo 'we are starting testing'					  
+		    }    
+      		 
+        }
+        stage('build') {
+		      steps {
+			         echo 'Building Sample maven Project'
+			}  
+        }
+        stage('deploy') {
+		      step {
+			        echo "Deploying in tomcat server"
+			}
+        } 		
+    }
+}
